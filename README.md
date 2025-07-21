@@ -20,6 +20,6 @@ Google Fonts: Tipografia moderna
 ## 🚀 Como Executar
 Clone ou baixe o repositório
 
-Abra o arquivo index.html no navegador
+Abra o arquivo 'index.html' no navegador
 
 Sem configurações extras – todas as dependências são carregadas via CDN
