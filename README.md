@@ -1,4 +1,4 @@
-# 🚗 Landing Page - Carros Esportivos
+# 🏎️ Landing Page - Carros Esportivos
 Uma landing page responsiva com tema de carros esportivos de alta performance, desenvolvida com HTML, CSS e JavaScript. Este projeto apresenta um design moderno, animações dinâmicas e um visual impactante para entusiastas de automóveis.
 
 ## 🌐 Visualize o projeto:
@@ -23,12 +23,3 @@ Clone ou baixe o repositório
 Abra o arquivo index.html no navegador
 
 Sem configurações extras – todas as dependências são carregadas via CDN
-
-## 🏎️ Destaques
-✔ Design ultra-moderno com foco em velocidade e estilo
-
-✔ Animações fluidas para melhor experiência do usuário
-
-✔ Galeria de carros interativa
-
-Pronto para acelerar? Experimente agora! 🚀💨
