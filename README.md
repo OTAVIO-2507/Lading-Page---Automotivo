@@ -26,6 +26,7 @@ Sem configurações extras – todas as dependências são carregadas via CDN
 
 ## 🏎️ Destaques
 ✔ Design ultra-moderno com foco em velocidade e estilo
+
 ✔ Animações fluidas para melhor experiência do usuário
 ✔ Galeria de carros interativa
 
