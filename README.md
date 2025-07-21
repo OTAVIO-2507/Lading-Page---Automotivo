@@ -1,2 +1,32 @@
-🚗💨 Imagine a emoção de ouvir o RONCO de um motor V8 ao ligar! 🔥 A adrenalina de pisar fundo e sentir o assento pressionar suas costas ⚡. A elegância agressiva de linhas que cortam o vento como uma lâmina ✨⚔️.
-Isso não é só um site – é um CONVITE ao prazer automotivo PURO. 🏁🎯
+🚗 Landing Page - Carros Esportivos
+Uma landing page responsiva com tema de carros esportivos de alta performance, desenvolvida com HTML, CSS e JavaScript. Este projeto apresenta um design moderno, animações dinâmicas e um visual impactante para entusiastas de automóveis.
+
+🌐 Visualize o projeto:
+Ver Projeto Online (link a ser adicionado)
+
+🛠️ Tecnologias Utilizadas
+HTML5: Estrutura semântica e otimizada
+
+CSS3: Estilização avançada e efeitos visuais
+
+JavaScript: Interatividade e dinamismo
+
+ScrollReveal: Animações suaves ao rolar a página
+
+Font Awesome: Ícones premium
+
+Google Fonts: Tipografia moderna
+
+🚀 Como Executar
+Clone ou baixe o repositório
+
+Abra o arquivo index.html no navegador
+
+Sem configurações extras – todas as dependências são carregadas via CDN
+
+🏎️ Destaques
+✔ Design ultra-moderno com foco em velocidade e estilo
+✔ Animações fluidas para melhor experiência do usuário
+✔ Galeria de carros interativa
+
+Pronto para acelerar? Experimente agora! 🚀💨
