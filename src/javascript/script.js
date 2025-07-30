@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Rotação automática (10 segundos)
+    // Rotação automática
     let autoRotate = setInterval(() => {
         active = active + 1 > lastPosition ? 0 : active + 1;
         setSlider();
@@ -83,6 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Fecha o menu mobile se estiver aberto
+                if (nav.classList.contains('active')) {
+                    mobileMenuBtn.classList.remove('active');
+                    nav.classList.remove('active');
+                }
             }
         });
     });
@@ -97,16 +103,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Animação dos itens de navegação
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach((item) => {
-        item.addEventListener('mouseenter', () => {
-            item.classList.remove('animated');
-            void item.offsetWidth;
-            item.classList.add('animated');
-        });
+    // Menu mobile
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('header nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        nav.classList.toggle('active');
     });
-
+    
+    // Verifica se é um dispositivo touch
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+    
+    if (isTouchDevice) {
+        // Adiciona eventos de touch para o carrossel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            const threshold = 50; // pixels mínimos para considerar um swipe
+            if (touchEndX < touchStartX - threshold) {
+                // Swipe para esquerda - próximo
+                nextButton.click();
+            } else if (touchEndX > touchStartX + threshold) {
+                // Swipe para direita - anterior
+                prevButton.click();
+            }
+        }
+        
+        // Ajusta o tempo de rotação automática para mobile
+        clearInterval(autoRotate);
+        autoRotate = setInterval(() => {
+            active = active + 1 > lastPosition ? 0 : active + 1;
+            setSlider();
+        }, 15000); // Aumenta para 15 segundos em dispositivos móveis
+    }
+    
     // Observer para animações no scroll
     const animateOnScroll = () => {
         const sections = document.querySelectorAll('.carros-section, footer#fale-conosco');
@@ -131,6 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(section);
         });
     };
-
+    
     animateOnScroll();
 });
